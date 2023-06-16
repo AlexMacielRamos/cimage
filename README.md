@@ -1,4 +1,4 @@
-# Starting point
+# cimage
 
 [![build-ublue](https://github.com/alexmacielramos/cimage/actions/workflows/build.yml/badge.svg)](https://github.com/alexmacielramos/cimage/actions/workflows/build.yml)
 
