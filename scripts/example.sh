@@ -9,6 +9,4 @@ set -oue pipefail
 echo 'This is an example shell script'
 echo 'Scripts here will run during build if specified in recipe.yml'
 
-mkdir dir1
-git clone https://github.com/AlexMacielRamos/scriptTest.git
-ls
+mkdir -p "$HOME"/new_home_dir
