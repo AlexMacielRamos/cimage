@@ -9,4 +9,10 @@ set -oue pipefail
 echo 'This is an example shell script'
 echo 'Scripts here will run during build if specified in recipe.yml'
 
-mkdir -p "$HOME"/new_home_dir
+if test -d "$HOME"; then
+   if test ! -d "$HOME"/.config; then
+        mkdir -p "$HOME"/.config
+        echo 'se creo archivo y directorio con exito'
+        echo 'se logro' > success.txt
+    fi
+fi
