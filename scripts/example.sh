@@ -12,11 +12,16 @@ echo 'Scripts here will run during build if specified in recipe.yml'
 
 
 #echo $PWD
-if test -d usr/bin; then
+if test -d usr; then
    if test ! -e usr/bin/aafile.txt; then
-        #mkdir -p "$HOME"/.config
-        
-        echo 'se logro' > usr/bin/aafile.txt
-        echo 'se creo archivo con exito'
+     #mkdir -p "$HOME"/.config
+     
+     echo 'se logro' > usr/bin/aafile.txt
+     echo 'se creo archivo con exito'
+   fi
+
+   if test ! -d usr/share/aadir; then
+      mkdir -p usr/share/aadir
+      echo 'se creo directorio con exito'
    fi
 fi
