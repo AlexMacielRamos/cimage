@@ -12,6 +12,8 @@ echo 'Scripts here will run during build if specified in recipe.yml'
 cd usr/share
 git clone https://github.com/AlexMacielRamos/scriptTest.git
 echo 'se clono repositorio con exito'
+git checkout dev
+echo 'se cambio a rama dev'
 
 
 #echo $PWD
