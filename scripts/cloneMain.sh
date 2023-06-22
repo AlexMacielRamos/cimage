@@ -17,7 +17,7 @@ echo 'se clono repositorio con exito'
 #cd scriptTest
 #git fetch origin
 
-pip install pyside6
+#pip install pyside6
 pip install virtualenv
 mkdir myvenv
 python -m venv /myvenv/myvenv
