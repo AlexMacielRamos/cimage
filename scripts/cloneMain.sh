@@ -15,14 +15,16 @@ pip config set global.target /usr/lib/python3.11/site-packages
 pip install pyside6
 pip install virtualenv
 mkdir myvenv
-python -m venv /myvenv/venv1
+python -m venv myvenv/venv1
 
 git clone https://github.com/AlexMacielRamos/scriptTest.git
 echo 'se clono repositorio con exito'
 #cd scriptTest
 #git fetch origin
 
-cd myvenv/venv1
+cd myvenv
+ls
+cd venv1
 ls
 
 
