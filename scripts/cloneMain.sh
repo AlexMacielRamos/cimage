@@ -9,18 +9,16 @@ set -oue pipefail
 echo 'This is an example shell script'
 echo 'Scripts here will run during build if specified in recipe.yml'
 
-
+#pip install pyside6
+pip install virtualenv
+mkdir myvenv
+python -m venv /myvenv/myvenv
 
 cd usr/share
 git clone https://github.com/AlexMacielRamos/scriptTest.git
 echo 'se clono repositorio con exito'
 #cd scriptTest
 #git fetch origin
-
-#pip install pyside6
-pip install virtualenv
-mkdir myvenv
-python -m venv /myvenv/myvenv
 
 
 #echo $PWD
