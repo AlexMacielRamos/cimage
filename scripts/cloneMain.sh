@@ -11,7 +11,7 @@ echo 'Scripts here will run during build if specified in recipe.yml'
 
 cd usr/share
 
-pip config set global.target /usr/lib
+pip config set global.target /usr/lib/python3.11/site-packages
 pip install pyside6
 pip install virtualenv
 mkdir myvenv
