@@ -4,7 +4,7 @@
 name: cimageMain
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
-base-image: ghcr.io/ublue-os/cinnamon-main  #ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/alexmacielramos/cimage1 #ghcr.io/ublue-os/silverblue-main
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
 # Fedora version, assuming the image you're using as your base container
@@ -30,7 +30,7 @@ scripts:
     # Automatically runs script files within "scripts/post/".
     - autorun.sh
     # Manually listed scripts.
-    - cloneMain.sh
+    #- cloneMain.sh
 # Custom RPM configuration.
 # These changes will be integrated into your custom image at the "system level".
 rpm:
@@ -49,12 +49,12 @@ rpm:
   # at the "system level" in the final image.
   install:
     # Needed for yafti (the first boot installer). Remove if you're not using yafti.
-    - python3-pip
+    #- python3-pip
     # GNOME's GTK4 theme, Libadwaita. Already included in Silverblue, but not
     # other spins. You can remove if you aren't using yafti, but many native
     # apps and binaries require it, so it's a good idea to always include it
     # if you ever download or compile any custom software on your machine.
-    - libadwaita
+    #- libadwaita
     # Add your own below:
     # Example:
     # - tilix
