@@ -4,7 +4,7 @@
 name: cimageMain
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
-base-image: ghcr.io/alexmacielramos/cimage1 #ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/silverblue-main
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
 # Fedora version, assuming the image you're using as your base container
@@ -54,7 +54,7 @@ rpm:
     # other spins. You can remove if you aren't using yafti, but many native
     # apps and binaries require it, so it's a good idea to always include it
     # if you ever download or compile any custom software on your machine.
-    #- libadwaita
+    - libadwaita
     # Add your own below:
     # Example:
     # - tilix
@@ -62,14 +62,14 @@ rpm:
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
-    #- firefox
-    #- firefox-langpacks
+    - firefox
+    - firefox-langpacks
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
   # Whether to embed "yafti" into the OS image and configure it to autostart,
   # which is the preferred uBlue "first boot" GUI. Set this to "false" if you've
   # decided to use a different solution instead.
-  yafti: false
+  yafti: true
   # These Flatpaks will be suggested for install after user login, via the yafti
   # "first boot" GUI. Everything below will be merged into the "yafti.yml" config
   # on build, in a category named "Custom". If you prefer, you can instead remove
